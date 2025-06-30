@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+        }
+
+        .standard-button-group {
+            display: flex;
+            gap: 4px;
+        }
+
+        .standard-button {
+            background-color: #F3EDF7;
+            color: #49454F;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            gap: 8px;
+            border-radius: 500px;
+            transition: 300ms;
+        }
+
+        .default {
+            padding: 24px;
+        }
+
+        .wide {
+            padding: 24px 36px;
+        }
+
+        .narrow {
+            padding: 24px 16px;
+        }
+
+        .selected-standard {
+            background-color: #6750A4;
+            color: #FFFFFF;
+            border-radius: 14px;
+        }
+
+        .connected-button-group {
+            display: flex;
+            gap: 2px;
+        }
+
+        .connected-button {
+            width: 96px;
+            height: 48px;
+            background-color: #E8DEF8;
+            color: #4A4459;
+            border: none;
+            border-radius: 8px;
+            transition: 300ms;
+        }
+
+        .connected-button-group button:first-child {
+            border-radius: 99px 35px 35px 99px;
+        }
+
+        .connected-button-group button:last-child {
+            border-radius: 35px 99px 99px 35px;
+        }
+
+        .selected-connected {
+            background-color: #625B71;
+            color: #FFFFFF;
+            border-radius: 99px !important;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="p-4">
+        <h1 class="text-center font-semibold text-2xl">BUTTON GROUPS</h1>
+        <section class="mt-4 w-fit mx-auto">
+            <h1 class="text-center text-xl m-2">Standard</h1>
+            <div class="standard-button-group">
+                <button class="standard-button default"><i class="material-icons">bluetooth</i></button>
+                <button class="standard-button wide"><i class="material-icons">alarm</i></button>
+                <button class="standard-button narrow"><i class="material-icons">stars</i></button>
+                <button class="standard-button narrow"><i class="material-icons">flashlight_on</i></button>
+                <button class="standard-button default selected-standard"><i class="material-icons">wifi</i></button>
+            </div>
+        </section>
+
+        <section class="mt-4 w-fit mx-auto">
+            <h1 class="text-center text-xl m-2">Connected</h1>
+            <div class="connected-button-group">
+                <button class="connected-button selected-connected">
+                    1KG
+                </button>
+                <button class="connected-button">
+                    2KG
+                </button>
+                <button class="connected-button">
+                    3KG
+                </button>
+                <button class="connected-button">
+                    4KG
+                </button>
+            </div>
+        </section>
+
+    </main>
+    <script>
+        let standardButtons = document.querySelectorAll('.standard-button');
+        standardButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                if (button.classList.contains('selected-standard')) {
+                    button.classList.remove('selected-standard');
+                } else {
+                    standardButtons.forEach(btn => btn.classList.remove('selected-standard'));
+                    button.classList.add('selected-standard');
+                }
+            });
+        });
+
+        let connectedButtons = document.querySelectorAll('.connected-button');
+        connectedButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                if (button.classList.contains('selected-connected')) {
+                    button.classList.remove('selected-connected');
+                } else {
+                    connectedButtons.forEach(btn => btn.classList.remove('selected-connected'));
+                    button.classList.add('selected-connected');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Buttons</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+        }
+
+        button {
+            padding: 16px 24px;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            gap: 8px;
+            width: fit-content;
+        }
+
+        /* ROUNDED BUTTON STYLES */
+        .rounded-filled {
+            border-radius: 5000px;
+            background-color: #F3EDF7;
+            color: #49454F;
+            transition: 300ms;
+        }
+
+        .rounded-tonal {
+            border-radius: 5000px;
+            background-color: #E8DEF8;
+            color: #4A4459;
+            transition: 300ms;
+        }
+
+        .rounded-outlined {
+            border-radius: 5000px;
+            color: #49454F;
+            border: 1px solid #CAC4D0;
+            transition: 300ms;
+        }
+
+        .rounded-elevated {
+            border-radius: 5000px;
+            background-color: #F7F2FA;
+            color: #6750A4;
+            box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+                0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+            transition: 300ms;
+        }
+
+        /* SQUARE BUTTON STYLES */
+        .square-filled {
+            border-radius: 16px;
+            background-color: #F3EDF7;
+            color: #49454F;
+            transition: 300ms;
+        }
+
+        .square-tonal {
+            border-radius: 16px;
+            background-color: #E8DEF8;
+            color: #4A4459;
+            transition: 300ms;
+        }
+
+        .square-outlined {
+            border-radius: 16px;
+            color: #49454F;
+            border: 1px solid #CAC4D0;
+            transition: 300ms;
+        }
+
+        .square-elevated {
+            border-radius: 16px;
+            background-color: #F7F2FA;
+            color: #6750A4;
+            box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+                0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+            transition: 300ms;
+        }
+
+        /* ROUNDED BUTTON SELECTED STYLES */
+        .rounded-filled-selected {
+            border-radius: 16px;
+            background-color: #6750A4;
+            color: #FFFFFF;
+        }
+
+        .rounded-tonal-selected{
+            border-radius: 16px;
+            background-color: #625B71;
+            color: #FFFFFF;
+        }
+        
+        .rounded-outlined-selected{
+            border-radius: 16px;
+            background-color: #322F35;
+            color: #F5EFF7;
+        }
+
+        .rounded-elevated-selected{
+            border-radius: 16px;
+            background-color: #6750A4;
+            color: #FFFFFF;
+            box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+                0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+        }
+        /* SQUARE BUTTON SELECTED STYLES */
+        .square-filled-selected {
+            border-radius: 500px;
+            background-color: #6750A4;
+            color: #FFFFFF;
+        }
+
+        .square-tonal-selected {
+            border-radius: 500px;
+            background-color: #625B71;
+            color: #FFFFFF;
+        }
+
+        .square-outlined-selected {
+            border-radius: 500px;
+            background-color: #322F35;
+            color: #F5EFF7;
+        }
+
+        .square-elevated-selected {
+            border-radius: 500px;
+            background-color: #6750A4;
+            color: #FFFFFF;
+            box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+                0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+
+<body>
+    <main class="p-4">
+        <h1 class="text-center font-semibold text-2xl">TOGGLE BUTTON</h1>
+        <div class="mt-4 w-80 md:w-200 mx-auto">
+            <h1 class="text-center text-xl m-2">Rounded</h1>
+            <div class="flex items-center flex-col gap-4 w-full mx-auto  md:flex-row md:justify-center">
+                <button class="rounded-filled">
+                    <i class="material-icons">stars</i>
+                    Filled
+                </button>
+
+                <button class="rounded-tonal">
+                    <i class="material-icons">stars</i>
+                    Tonal
+                </button>
+
+                <button class="rounded-outlined">
+                    <i class="material-icons">stars</i>
+                    Outline
+                </button>
+
+                <button class="rounded-elevated">
+                    <i class="material-icons">stars</i>
+                    Elevated
+                </button>
+            </div>
+        </div>
+
+        <div class="mt-8 w-80 mx-auto">
+            <h1 class="text-center text-xl m-2">Square</h1>
+            <div class="flex items-center flex-col gap-4 w-full mx-auto  md:flex-row md:justify-center">
+                <button class="square-filled">
+                    <i class="material-icons">stars</i>
+                    Filled
+                </button>
+
+                <button class="square-tonal">
+                    <i class="material-icons">stars</i>
+                    Tonal
+                </button>
+
+                <button class="square-outlined">
+                    <i class="material-icons">stars</i>
+                    Outline
+                </button>
+
+                <button class="square-elevated">
+                    <i class="material-icons">stars</i>
+                    Elevated
+                </button>
+
+            </div>
+        </div>
+    </main>
+    <script>
+        let rf = document.querySelector('.rounded-filled');
+        let rt = document.querySelector('.rounded-tonal');
+        let ro = document.querySelector('.rounded-outlined');
+        let re = document.querySelector('.rounded-elevated');
+        let sf = document.querySelector('.square-filled');
+        let st = document.querySelector('.square-tonal');
+        let so = document.querySelector('.square-outlined');
+        let se = document.querySelector('.square-elevated');
+
+        rf.addEventListener('click', () => {
+            if (rf.classList.contains('rounded-filled-selected')) {
+                rf.classList.remove('rounded-filled-selected');
+            } else {
+                rf.classList.add('rounded-filled-selected');
+            }
+        });
+
+        rt.addEventListener('click', () => {
+            if (rt.classList.contains('rounded-tonal-selected')) {
+                rt.classList.remove('rounded-tonal-selected');
+            } else {
+                rt.classList.add('rounded-tonal-selected');
+            }
+        });
+
+        ro.addEventListener('click', () => {
+            if (ro.classList.contains('rounded-outlined-selected')) {
+                ro.classList.remove('rounded-outlined-selected');
+            } else {
+                ro.classList.add('rounded-outlined-selected');
+            }
+        });
+
+        re.addEventListener('click', () => {
+            if (re.classList.contains('rounded-elevated-selected')) {
+                re.classList.remove('rounded-elevated-selected');
+            } else {
+                re.classList.add('rounded-elevated-selected');
+            }
+        });
+
+        sf.addEventListener('click', () => {
+            if (sf.classList.contains('square-filled-selected')) {
+                sf.classList.remove('square-filled-selected');
+            } else {
+                sf.classList.add('square-filled-selected');
+            }
+        });
+
+        st.addEventListener('click', () => {
+            if (st.classList.contains('square-tonal-selected')) {
+                st.classList.remove('square-tonal-selected');
+            } else {
+                st.classList.add('square-tonal-selected');
+            }
+        });
+
+        so.addEventListener('click', () => {
+            if (so.classList.contains('square-outlined-selected')) {
+                so.classList.remove('square-outlined-selected');
+            } else {
+                so.classList.add('square-outlined-selected');
+            }
+        });
+
+        se.addEventListener('click', () => {
+            if (se.classList.contains('square-elevated-selected')) {
+                se.classList.remove('square-elevated-selected');
+            } else {
+                se.classList.add('square-elevated-selected');
+            }
+        });
+    </script>
+</body>
+
+</html>

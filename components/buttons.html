@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+        }
+
+        button {
+            padding: 16px 24px;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            gap: 8px;
+            width: fit-content;
+        }
+
+        /* TYPES OF BUTTON SHAPE */
+        .rounded {
+            border-radius: 5000px;
+        }
+
+        .square {
+            border-radius: 16px;
+        }
+
+        /* TYPES OF BUTTON STYLE */
+        .filled {
+            background-color: #6750A4;
+            color: #FFFFFF;
+        }
+
+        .tonal {
+            background-color: #E8DEF8;
+            color: #4A4459;
+        }
+
+        .outlined {
+            color: #49454F;
+            border: 1px solid #CAC4D0;
+        }
+
+        .elevated {
+            background-color: #F7F2FA;
+            color: #6750A4;
+            box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+                0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+        }
+
+        .text {
+            color: #6750A4;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="p-4">
+        <h1 class="text-center font-semibold text-2xl">BUTTON</h1>
+        <div class="mt-4 w-80 md:w-200 mx-auto">
+            <h1 class="text-center text-xl m-2">Rounded</h1>
+            <div class="flex items-center flex-col gap-4 w-full mx-auto  md:flex-row md:justify-center">
+                <button class="rounded filled">
+                    <i class="material-icons">stars</i>
+                    Filled
+                </button>
+
+                <button class="rounded tonal">
+                    <i class="material-icons">stars</i>
+                    Tonal
+                </button>
+
+                <button class="rounded outlined">
+                    <i class="material-icons">stars</i>
+                    Outline
+                </button>
+
+                <button class="rounded elevated">
+                    <i class="material-icons">stars</i>
+                    Elevated
+                </button>
+
+                <button class="rounded text">
+                    <i class="material-icons">stars</i>
+                    Text
+                </button>
+            </div>
+        </div>
+
+        <div class="mt-8 w-80 mx-auto">
+            <h1 class="text-center text-xl m-2">Square</h1>
+            <div class="flex items-center flex-col gap-4 w-full mx-auto  md:flex-row md:justify-center">
+                <button class="square filled">
+                    <i class="material-icons">stars</i>
+                    Filled
+                </button>
+
+                <button class="square tonal">
+                    <i class="material-icons">stars</i>
+                    Tonal
+                </button>
+
+                <button class="square outlined">
+                    <i class="material-icons">stars</i>
+                    Outline
+                </button>
+
+                <button class="square elevated">
+                    <i class="material-icons">stars</i>
+                    Elevated
+                </button>
+
+                <button class="square text">
+                    <i class="material-icons">stars</i>
+                    Text
+                </button>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
